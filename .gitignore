@@ -1,0 +1,25 @@
+# Local dependencies and generated output
+node_modules/
+dist/
+coverage/
+
+# Environment and local data
+.env
+.env.*
+!.env.example
+**/data.json
+
+# Obsidian configuration and Vault data
+.obsidian/
+**/.obsidian/
+/command-center/
+**/command-center/
+/vault/
+**/vault/
+/.vault/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
