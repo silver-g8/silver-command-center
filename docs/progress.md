@@ -1,38 +1,39 @@
 # Progress handoff
 
-## Current phase
+## Current Phase
 
-Phase 0 — foundation and repository migration.
+Phase 0 — Foundation implementation complete; pending draft PR #1 merge.
 
-## Completed in this handoff
+## Completed
 
 - Confirmed the working checkout is `/home/sg8/devProject/silver-command-center`.
-- Confirmed baseline commit `53bbc70f04d7bc02f1fa56cae5e8f93881a79229` and a clean starting tree.
-- Created and pushed annotated tag `baseline/web-v0.1.0`.
-- Created and pushed `main`, changed GitHub's default branch to `main`, and retained `master`.
-- Created `chore/phase-0-foundation` from `main`.
+- Confirmed baseline commit `53bbc70f04d7bc02f1fa56cae5e8f93881a79229` and preserved tag `baseline/web-v0.1.0`.
+- Created `main` as the default branch and retained `master`.
 - Moved the nine prototype files into `prototypes/web-v0/` without content changes.
-- Verified all nine moved files against the baseline blob SHA.
-- Committed the relocation as `8295579`.
-- Added the root privacy guard and Phase 0 documentation in commit `6ce638a`.
-- Pushed `chore/phase-0-foundation` and opened draft PR [#1](https://github.com/silver-g8/silver-command-center/pull/1) into `main`.
+- Added the root privacy guard and phase-aware project documentation.
+- Aligned the product scope with the Front Seat, Trunk, Pomodoro/focus, Markdown source-of-truth, two-way sync, restart persistence, and confirmation-gate decisions.
+- Kept the branch docs-only: no plugin scaffold, domain feature, Vault data, or secrets.
 
-## Decisions
+## Current review state
 
-- The current checkout is the source of truth; no second clone under `/home/sg8/Projects` is used.
-- Phase 0 contains structure and documentation only.
-- The prototype remains a preserved web artifact and is not treated as a plugin implementation.
-- The repository is public, while user Vault data remains local and outside the repository.
-- `main` is the default branch; `master` remains as historical continuity.
+- Draft PR: [#1](https://github.com/silver-g8/silver-command-center/pull/1)
+- Branch: `chore/phase-0-foundation`
+- Requested follow-up: review the documentation alignment before merge.
+- The PR must remain draft and must not be merged until explicit confirmation.
 
-## Blockers and limits
+## Phase 1 next step
 
-- No real Vault data is available or required for Phase 0.
-- No Obsidian plugin scaffold or feature implementation has been started.
-- Phase 0 intentionally does not run dependency installation, build, or dev-server commands.
+Phase 1 is limited to the Obsidian Plugin scaffold: manifest, entry point, build configuration, and development checks. It does not include domain features such as Front Seat, Trunk, focus timer, sync logic, AI, or external integrations.
 
-## Next steps
+## Validation status
 
-1. Review draft PR #1, its changed files, and the privacy boundary.
-2. Confirm that no Vault data, secrets, or unintended feature work is present.
-3. Give explicit confirmation before merging into `main`.
+- Prototype content-preservation checks remain required and must pass after every docs-only follow-up.
+- Privacy boundary checks remain required.
+- Build and runtime checks were intentionally not run during Phase 0 because no plugin scaffold exists yet.
+
+## Decisions and constraints
+
+- Work only within the phase named in this document and the explicitly approved task.
+- Markdown will be the source of truth for user-authored work data; React state is temporary working state.
+- AI and external writes require validation and confirmation.
+- No Vault data or secrets may enter the repository.

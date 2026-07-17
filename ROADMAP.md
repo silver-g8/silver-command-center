@@ -1,51 +1,64 @@
 # Roadmap
 
-The roadmap separates the preserved web prototype from the future Obsidian plugin. Feature work starts only after the foundation is reviewed.
+The roadmap separates the preserved prototype from the approved SilverCommandCenter product direction. Work must follow the current phase recorded in `docs/progress.md`.
 
-## Milestones
+## Milestone 1 — Foundation
 
-### Milestone 1 — Phase 0 foundation
-
-Status: in progress on `chore/phase-0-foundation`.
+Status: Phase 0 implementation complete — pending PR #1 merge.
 
 Scope:
 
 - Preserve the original Vite prototype under `prototypes/web-v0/`.
 - Establish the baseline tag, `main` branch, repository layout, and privacy boundary.
-- Document product scope, architecture, progress, and Fedora-specific constraints.
+- Document the target product model, architecture principles, phase routing, and Fedora constraints.
 
 Definition of Done:
 
-- Prototype files retain their baseline content and are detected as renames.
-- Root privacy guards are present and staged content contains no Vault data or secrets.
-- Phase 0 documentation is complete and the branch is reviewed through a Pull Request.
+- Prototype content remains unchanged and relocation is reviewable as renames.
+- Privacy guards and documentation are complete.
+- Draft PR #1 is reviewed and explicitly approved before merge.
 
-### Milestone 2 — Phase 1 plugin scaffold
+## Milestone 2 — Core MVP
 
-Status: planned; out of scope for Phase 0.
+Status: planned after Phase 1 scaffold review.
 
-Candidate scope: create the minimal Obsidian plugin entry point, manifest, build configuration, and development checks without introducing domain features.
+Scope:
 
-Definition of Done: the plugin loads in a test Vault, has a documented build path, and has no dependency on private Vault content.
+- One Front Seat MIT.
+- Deferred tasks in the Trunk.
+- Pomodoro/focus timer.
+- Markdown as source of truth with dashboard/Markdown two-way synchronization.
+- Durable local state that survives an Obsidian restart.
+- Validation and confirmation boundaries for AI and external writes.
 
-### Milestone 3 — Local command center MVP
+Definition of Done: the Core MVP behavior is specified by schemas and workflows, survives restart, validates Markdown/frontmatter, handles synchronization failures safely, and has no unconfirmed writes.
 
-Status: planned; requires a separate scope decision.
+## Milestone 3 — Daily Workflow
 
-Candidate scope: turn the prototype's navigation and dashboard concepts into local plugin views backed by explicitly defined local data contracts.
+Status: planned after Core MVP validation.
 
-Definition of Done: each implemented workflow has a documented source of truth, privacy boundary, and verification path.
+Scope: make the Front Seat, Trunk, focus timer, and Markdown workflow practical for repeated daily use, including clear transitions, review states, and recovery from interrupted or offline work.
 
-### Milestone 4 — Hardening and release readiness
+Definition of Done: a documented daily workflow can be completed locally with durable state, understandable empty/error/offline states, and no accidental data loss.
 
-Status: planned.
+## Milestone 4 — Extensions
 
-Candidate scope: tests, compatibility checks, migration notes, packaging, and release documentation.
+Status: planned; each extension requires separate approval.
 
-Definition of Done: supported environments, upgrade behavior, validation commands, and release artifacts are documented and reproducible.
+Candidate extensions include Calendar, Voice, Terminal, Live Feeds, AI integrations, and other external systems. None of these are part of the Core MVP.
 
-## Guardrails
+Definition of Done: each extension has an explicit data boundary, validation path, confirmation policy, failure behavior, and privacy review before implementation.
 
-- Do not import real Vault data into the repository.
-- Do not treat the web prototype as proof that plugin behavior already exists.
-- Keep source facts, project decisions, and future proposals clearly separated.
+## Phase sequence
+
+### Phase 0 — Foundation
+
+Implementation complete; pending PR #1 merge. This phase contains repository structure, preservation, privacy, and documentation only.
+
+### Phase 1 — Obsidian Plugin scaffold
+
+Next step after Phase 0 merge. Phase 1 is limited to the Obsidian Plugin scaffold: manifest, entry point, build configuration, and development checks. It does not include Front Seat, Trunk, timer, sync logic, AI, or other domain features.
+
+### Later phases
+
+Core MVP, Daily Workflow, and Extensions begin only after their phase is approved and recorded in `docs/progress.md`.

@@ -1,54 +1,61 @@
 # Product scope
 
-## Scope status
+## Prototype facts
 
-This document defines the working boundary for Phase 0. It records what the preserved prototype shows and what the future product may become; it does not claim that future plugin behavior already exists.
+The current web prototype is evidence about the starting interface, not the product model:
 
-## Problem
-
-The repository contains a visual command-center prototype, but the prototype currently uses static in-memory examples and has no real data source. The project needs a durable foundation before the interface is connected to local operational data.
-
-## Users
-
-Project decision: the initial product is for a single operator or knowledge worker who wants a private local workspace for reviewing work signals and missions. Multi-user collaboration, permissions, and remote synchronization are not defined by the current source and remain out of scope until separately decided.
-
-## Source facts from the prototype
-
-- The prototype is a React 18+ application built with Vite.
+- It is a React 18+ application built with Vite.
 - Its visible navigation names are Overview, Missions, Signals, and Team.
-- Its dashboard presents mock concepts for active missions, team availability, open alerts, mission progress, and team pulse.
-- The visible interactions change the selected view or toggle a simulated live-workspace state.
-- No persistence, backend, Obsidian API, Vault access, or real operational data is present.
+- Its dashboard contains static mock concepts for active missions, team availability, open alerts, mission progress, and team pulse.
+- Its interactions change local component state, including the selected view and a simulated live-workspace state.
+- It has no persistence, Markdown source of truth, Obsidian API calls, Vault access, backend, or real operational data.
+- Missions, Signals, and Team are prototype labels and must not be treated as the core SilverCommandCenter product model.
 
-## Candidate use cases
+## Target product decisions
 
-These are product directions, not implemented features:
+These decisions define the target SilverCommandCenter direction. They are not claims that the current prototype or Phase 0 already implements them.
 
-1. Review a local overview of active work.
-2. Inspect mission progress and related signals.
-3. Keep private workspace information close to the user's local knowledge system.
-4. Make the source of each displayed value explicit before showing it as live data.
+- The product is a local-first Obsidian command center.
+- Markdown files are the source of truth for user-authored work data.
+- The Front Seat contains exactly one MIT (Most Important Task) at a time.
+- The Trunk contains deferred tasks that are intentionally not in the Front Seat.
+- A Pomodoro/focus timer supports the user's active focus session.
+- The dashboard and Markdown files have two-way synchronization: dashboard edits persist to Markdown, and valid Markdown changes are reflected back in the dashboard.
+- Data remains available after Obsidian restarts through durable local persistence.
+- AI actions and all external writes must validate their proposed change and request confirmation before applying it.
 
-## MVP boundary
+## Core MVP
 
-### In
+The Core MVP is the smallest product boundary after the plugin scaffold:
 
-- An Obsidian plugin shell with a documented local-first data boundary.
-- A small, explicit local data contract for the first supported workspace view.
-- Readable empty, unavailable, and stale-data states.
-- Documentation and verification that prevent accidental Vault or secret commits.
+1. Show and edit exactly one Front Seat MIT.
+2. Show and manage deferred tasks in the Trunk.
+3. Start, pause, resume, and complete a Pomodoro/focus timer.
+4. Read and write the defined Markdown files as the source of truth.
+5. Keep dashboard and Markdown changes synchronized in both directions.
+6. Preserve valid task and timer data across an Obsidian restart.
+7. Validate Markdown/frontmatter changes and require confirmation for AI or external write actions.
 
-### Out
+The MVP must provide clear loading, empty, error, and offline states. It must not silently overwrite a user's Markdown file when validation or synchronization detects ambiguity.
 
-- Remote services, team accounts, permissions, or multi-user synchronization.
+## Non-goals for MVP
+
+- Treating Missions, Signals, or Team as the primary product model.
+- Calendar integration.
+- Voice input or voice commands.
+- Terminal integration.
+- Live feeds or remote real-time data.
+- Autonomous AI writes or external writes without validation and confirmation.
+- Multi-user collaboration, accounts, permissions, or remote synchronization.
 - Automatic ingestion of arbitrary Vault files.
-- Trading, financial, medical, or other high-stakes recommendations.
-- A claim that the current web prototype is already an Obsidian plugin.
-- Any feature implementation during Phase 0.
+- High-stakes recommendations or decisions.
 
-## Open product decisions
+## Open decisions
 
-- Which local source is authoritative for each future dashboard value?
-- Which fields are user-authored notes versus derived status?
-- What is the minimum supported Obsidian version and desktop/mobile scope?
-- Which interactions from the prototype are essential for the first plugin release?
+- What Markdown file layout and YAML frontmatter schema represent the Front Seat and Trunk?
+- How is the one-MIT invariant validated and repaired when Markdown contains duplicates?
+- What task identifier and ordering rules are required for stable two-way sync?
+- Which timer state is persisted, and how should an interrupted session be represented?
+- How are concurrent dashboard edits and external Markdown edits reconciled?
+- What minimum Obsidian version and desktop/mobile scope are supported?
+- Which AI and external integrations may be proposed after the Core MVP, and what confirmation UI do they require?
