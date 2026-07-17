@@ -14,7 +14,8 @@ Phase 0 — foundation and repository migration.
 - Moved the nine prototype files into `prototypes/web-v0/` without content changes.
 - Verified all nine moved files against the baseline blob SHA.
 - Committed the relocation as `8295579`.
-- Added the root privacy guard and Phase 0 documentation in the current working tree.
+- Added the root privacy guard and Phase 0 documentation in commit `6ce638a`.
+- Pushed `chore/phase-0-foundation` and opened draft PR [#1](https://github.com/silver-g8/silver-command-center/pull/1) into `main`.
 
 ## Decisions
 
@@ -32,8 +33,6 @@ Phase 0 — foundation and repository migration.
 
 ## Next steps
 
-1. Review staged privacy guards and all Phase 0 documentation.
-2. Commit the privacy guard and documentation as a separate commit set.
-3. Inspect local history and working tree.
-4. Push `chore/phase-0-foundation`, open a Pull Request into `main`, and review its diff.
-5. Wait for explicit confirmation before merging.
+1. Review draft PR #1, its changed files, and the privacy boundary.
+2. Confirm that no Vault data, secrets, or unintended feature work is present.
+3. Give explicit confirmation before merging into `main`.
