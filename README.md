@@ -4,7 +4,7 @@ SilverCommandCenter is being prepared as a local-first Obsidian command center. 
 
 ## Current status
 
-- Phase 0 implementation: complete — pending draft PR #1 merge
+- Phase 0 implementation: complete — PR #1 merged with merge commit `da8f002f5c6d6b37339cd0ade6e6f1832baa7efb`
 - Next phase: Phase 1 — Obsidian Plugin scaffold only
 - Baseline: `baseline/web-v0.1.0` at commit `53bbc70f04d7bc02f1fa56cae5e8f93881a79229`
 - The original web prototype remains preserved under `prototypes/web-v0/`

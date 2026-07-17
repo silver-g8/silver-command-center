@@ -2,7 +2,7 @@
 
 ## Current Phase
 
-Phase 0 — Foundation implementation complete; pending draft PR #1 merge.
+Phase 0 — Foundation implementation complete; PR #1 merged.
 
 ## Completed
 
@@ -13,17 +13,21 @@ Phase 0 — Foundation implementation complete; pending draft PR #1 merge.
 - Added the root privacy guard and phase-aware project documentation.
 - Aligned the product scope with the Front Seat, Trunk, Pomodoro/focus, Markdown source-of-truth, two-way sync, restart persistence, and confirmation-gate decisions.
 - Kept the branch docs-only: no plugin scaffold, domain feature, Vault data, or secrets.
+- Merged PR #1 into `main` with merge commit `da8f002f5c6d6b37339cd0ade6e6f1832baa7efb`.
+- Deleted `chore/phase-0-foundation` from both GitHub and the local checkout.
+- Synced local `main` with `origin/main` and confirmed a clean working tree.
 
-## Current review state
+## Post-merge state
 
-- Draft PR: [#1](https://github.com/silver-g8/silver-command-center/pull/1)
-- Branch: `chore/phase-0-foundation`
-- Requested follow-up: review the documentation alignment before merge.
-- The PR must remain draft and must not be merged until explicit confirmation.
+- PR: [#1](https://github.com/silver-g8/silver-command-center/pull/1) — merged and closed.
+- Default branch: `main`.
+- Historical branch: `master` retained.
+- Baseline tag: `baseline/web-v0.1.0` retained.
+- Working branch `chore/phase-0-foundation`: deleted locally and remotely.
 
 ## Phase 1 next step
 
-Phase 1 is limited to the Obsidian Plugin scaffold: manifest, entry point, build configuration, and development checks. It does not include domain features such as Front Seat, Trunk, focus timer, sync logic, AI, or external integrations.
+Phase 1 is the next candidate step and is limited to the Obsidian Plugin scaffold: manifest, entry point, build configuration, and development checks. It does not include domain features such as Front Seat, Trunk, focus timer, sync logic, AI, or external integrations. It requires explicit phase approval before implementation.
 
 ## Validation status
 

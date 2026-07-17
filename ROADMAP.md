@@ -4,7 +4,7 @@ The roadmap separates the preserved prototype from the approved SilverCommandCen
 
 ## Milestone 1 — Foundation
 
-Status: Phase 0 implementation complete — pending PR #1 merge.
+Status: Phase 0 implementation complete — PR #1 merged.
 
 Scope:
 
@@ -16,7 +16,7 @@ Definition of Done:
 
 - Prototype content remains unchanged and relocation is reviewable as renames.
 - Privacy guards and documentation are complete.
-- Draft PR #1 is reviewed and explicitly approved before merge.
+- PR #1 was reviewed, approved, and merged with a merge commit.
 
 ## Milestone 2 — Core MVP
 
@@ -53,11 +53,11 @@ Definition of Done: each extension has an explicit data boundary, validation pat
 
 ### Phase 0 — Foundation
 
-Implementation complete; pending PR #1 merge. This phase contains repository structure, preservation, privacy, and documentation only.
+Implementation complete; PR #1 merged. This phase contains repository structure, preservation, privacy, and documentation only.
 
 ### Phase 1 — Obsidian Plugin scaffold
 
-Next step after Phase 0 merge. Phase 1 is limited to the Obsidian Plugin scaffold: manifest, entry point, build configuration, and development checks. It does not include Front Seat, Trunk, timer, sync logic, AI, or other domain features.
+Phase 1 is the next candidate step. It is limited to the Obsidian Plugin scaffold: manifest, entry point, build configuration, and development checks. It does not include Front Seat, Trunk, timer, sync logic, AI, or other domain features.
 
 ### Later phases
 
