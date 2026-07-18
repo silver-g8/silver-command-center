@@ -24,6 +24,18 @@ These decisions define the target SilverCommandCenter direction. They are not cl
 - Data remains available after Obsidian restarts through durable local persistence.
 - AI actions and all external writes must validate their proposed change and request confirmation before applying it.
 
+## Phase 1 platform decision
+
+The Phase 1 platform decision is confirmed and is not an Open Decision:
+
+- Minimum supported Obsidian version: `1.12.7`.
+- Phase 1 support scope is desktop-only.
+- `manifest.json` sets `isDesktopOnly: true`.
+- Phase 1 is tested on Fedora Linux desktop.
+- The implementation avoids Electron-specific and Node-specific runtime APIs, preserving a path to future mobile support.
+
+Mobile is not supported by the Phase 1 scaffold.
+
 ## Core MVP
 
 The Core MVP is the smallest product boundary after the plugin scaffold:
@@ -52,10 +64,16 @@ The MVP must provide clear loading, empty, error, and offline states. It must no
 
 ## Open decisions
 
+The Phase 1 platform decision above is settled. Mobile support for future product phases and releases remains open:
+
+- Which future phase will begin mobile support and testing?
+- What mobile layout and interaction requirements must be met?
+- What conditions would allow changing `isDesktopOnly` to `false`?
+- What Obsidian version support matrix should apply to long-term releases?
+
 - What Markdown file layout and YAML frontmatter schema represent the Front Seat and Trunk?
 - How is the one-MIT invariant validated and repaired when Markdown contains duplicates?
 - What task identifier and ordering rules are required for stable two-way sync?
 - Which timer state is persisted, and how should an interrupted session be represented?
 - How are concurrent dashboard edits and external Markdown edits reconciled?
-- What minimum Obsidian version and desktop/mobile scope are supported?
 - Which AI and external integrations may be proposed after the Core MVP, and what confirmation UI do they require?
