@@ -2,7 +2,19 @@
 
 ## Phase status
 
-Phase 0 implementation is complete and PR #1 is merged. Phase 1 scaffold implementation is complete on `feat/phase-1-plugin-scaffold` and is under review in Draft PR #2; no domain feature or Vault integration is present.
+Phase 0 implementation is complete and PR #1 is merged. Phase 1 implementation and verification are complete on `feat/phase-1-plugin-scaffold`; Draft PR #2 is pending review and explicit merge approval. No domain feature or Vault integration is present.
+
+## Phase 1 placeholder navigation
+
+The Phase 1 view exposes exactly five placeholder navigation tabs:
+
+- `Work`
+- `Build`
+- `Learn`
+- `Create`
+- `Inspired`
+
+These tabs provide navigation and active/focus state only. They do not represent Core MVP domain behavior, read Vault data, or create persistence.
 
 ## Architecture principles
 

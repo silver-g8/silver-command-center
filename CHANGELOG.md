@@ -18,6 +18,7 @@ All notable project changes are recorded here. The project is not following a re
 - Established `baseline/web-v0.1.0` as the preserved pre-migration snapshot.
 - Recorded Phase 1 automated verification as passing for typecheck, lint, and production build.
 - Published the scaffold branch and opened Draft PR #2 for review.
+- Completed the Phase 1 manifest and ItemView lifecycle follow-up with automated and manual verification.
 
 ### Not included
 

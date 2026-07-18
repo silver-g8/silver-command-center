@@ -12,6 +12,8 @@ This phase creates only the smallest runnable Obsidian Plugin shell for Silver C
 - Keyboard focus, active state, and basic tab semantics.
 - View-scoped CSS and a root esbuild/TypeScript/ESLint toolchain.
 
+The placeholder navigation is exactly `Work`, `Build`, `Learn`, `Create`, and `Inspired`. These labels are navigation scaffolding only; they have no domain behavior or Vault data behind them.
+
 The scaffold does not read or write the Vault and does not implement Front Seat, Trunk, Pomodoro, Markdown synchronization, settings, `data.json`, AI, network access, Calendar, Voice, Terminal, or Live Feeds. The preserved prototype remains outside this implementation.
 
 ## Automated verification
@@ -27,7 +29,7 @@ npm run build
 
 The production build creates `main.js` locally. It is ignored by Git and must not be committed. The build keeps `obsidian` external because Obsidian provides it at runtime.
 
-The current Fedora checkout has Node `22.23.1` and npm `12.0.0`. The local Obsidian executable reports `1.12.7`; the authorization brief named `1.27.7`. The scaffold keeps `minAppVersion` at `1.0.0` and avoids APIs flagged by the Obsidian lint rules as newer than that baseline.
+The current Fedora checkout has Node `22.23.1` and npm `12.0.0`. The local Obsidian executable reports `1.12.7`, and the manifest requires `minAppVersion: 1.12.7`. The Phase 1 scope is desktop-only, while the runtime avoids Electron-specific and Node-specific APIs.
 
 ## Manual deployment
 
@@ -40,7 +42,7 @@ cp manifest.json main.js styles.css \
   "$SCC_TEST_VAULT/.obsidian/plugins/silver-command-center/"
 ```
 
-In Obsidian:
+In Obsidian, manual verification of the updated manifest and lifecycle artifacts has been completed successfully in the dedicated test Vault.
 
 1. Open the selected test Vault.
 2. Enable community plugins if Obsidian requires it for a local plugin.
@@ -51,7 +53,7 @@ In Obsidian:
 7. Close and reopen the view, then reload Obsidian and repeat the open action.
 8. Confirm that no Vault note, frontmatter, setting, `data.json`, or other file is created or changed by the scaffold.
 
-The manual test is a stop point. Do not push, update a Pull Request, mark a Pull Request ready, or merge until the runtime result is reviewed and explicitly confirmed.
+The manual test is a required checkpoint before publishing follow-up changes. After the result is reviewed and explicitly confirmed, the follow-up may be committed and pushed while the Pull Request remains Draft. Do not mark it ready or merge it without explicit approval.
 
 ## Cleanup
 

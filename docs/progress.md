@@ -2,7 +2,7 @@
 
 ## Current Phase
 
-Phase 1 — Obsidian Plugin scaffold complete; Draft PR #2 is open for review on `feat/phase-1-plugin-scaffold`.
+Phase 1 — Obsidian Plugin implementation and verification complete; Draft PR #2 is pending review and explicit merge approval on `feat/phase-1-plugin-scaffold`.
 
 ## Completed
 
@@ -19,6 +19,7 @@ Phase 1 — Obsidian Plugin scaffold complete; Draft PR #2 is open for review on
 - Implemented the approved Phase 1 Obsidian Plugin scaffold with no domain features or Vault integration.
 - Completed automated checks and manual Obsidian runtime testing in the dedicated test Vault.
 - Pushed `feat/phase-1-plugin-scaffold` and opened Draft PR [#2](https://github.com/silver-g8/silver-command-center/pull/2).
+- Completed the manifest and ItemView lifecycle follow-up after a fresh deployment and manual re-test.
 
 ## Post-merge state
 
@@ -30,18 +31,16 @@ Phase 1 — Obsidian Plugin scaffold complete; Draft PR #2 is open for review on
 
 ## Phase 1 delivery scope
 
-Phase 1 was approved and limited to the Obsidian Plugin scaffold: manifest, entry point, build configuration, React mount/unmount lifecycle, five placeholder tabs, and development checks. It does not include domain features such as Front Seat, Trunk, focus timer, sync logic, AI, or external integrations. Manual testing passed before the branch was pushed and the Draft PR was opened.
+Phase 1 was approved and limited to the Obsidian Plugin scaffold: manifest, entry point, build configuration, React mount/unmount lifecycle, five placeholder tabs (`Work`, `Build`, `Learn`, `Create`, and `Inspired`), and development checks. The follow-up was freshly deployed and manually verified. The phase does not include domain features such as Front Seat, Trunk, focus timer, sync logic, AI, or external integrations.
 
 ## Phase 1 verification status
 
 - Prototype content-preservation checks remain required and must pass after every docs-only follow-up.
 - Privacy boundary checks remain required.
-- `npm run typecheck` passes.
-- `npm run lint` passes.
-- `npm run build` passes and creates ignored local output at `main.js`.
-- The local Obsidian executable reports version `1.12.7`; the authorization brief named `1.27.7`. The manifest remains at `minAppVersion: 1.0.0`, and the scaffold avoids APIs reported as newer than that baseline.
-- Deployment and manual runtime checks in the dedicated test Vault passed.
-- Draft PR #2 remains open and must not be marked ready or merged without explicit confirmation.
+- `npm run typecheck`, `npm run lint`, and `npm run build` pass for the follow-up.
+- The local Obsidian executable reports version `1.12.7`; the manifest now requires `minAppVersion: 1.12.7` and `isDesktopOnly: true`.
+- Deployment and manual runtime checks for the follow-up in the dedicated test Vault pass.
+- Draft PR #2 remains open as Draft and must not be marked ready or merged without explicit confirmation.
 
 ## Decisions and constraints
 

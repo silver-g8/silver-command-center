@@ -2,9 +2,9 @@
   "id": "silver-command-center",
   "name": "Silver Command Center",
   "version": "0.1.0",
-  "minAppVersion": "1.0.0",
+  "minAppVersion": "1.12.7",
   "description": "A local-first command center scaffold for Obsidian.",
   "author": "silver-g8",
   "authorUrl": "https://github.com/silver-g8",
-  "isDesktopOnly": false
+  "isDesktopOnly": true
 }

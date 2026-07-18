@@ -42,6 +42,10 @@ export default class SilverCommandCenterPlugin extends Plugin {
     });
   }
 
+  onunload(): void {
+    this.app.workspace.detachLeavesOfType(VIEW_TYPE);
+  }
+
   private async activateView(): Promise<void> {
     const { workspace } = this.app;
     let leaf = workspace.getLeavesOfType(VIEW_TYPE)[0];
@@ -51,5 +55,6 @@ export default class SilverCommandCenterPlugin extends Plugin {
     }
 
     await leaf.setViewState({ type: VIEW_TYPE, active: true });
+    await workspace.revealLeaf(leaf);
   }
 }

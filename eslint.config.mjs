@@ -41,4 +41,11 @@ export default defineConfig(
       "react-hooks/rules-of-hooks": "error",
     },
   },
+  {
+    // Phase 1 explicitly requires ItemView cleanup during plugin unload.
+    files: ["main.ts"],
+    rules: {
+      "obsidianmd/detach-leaves": "off",
+    },
+  },
 );
