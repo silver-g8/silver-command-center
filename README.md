@@ -1,11 +1,12 @@
 # Silver Command Center
 
-SilverCommandCenter is being prepared as a local-first Obsidian command center. Phase 0 established the repository foundation, and Phase 1 is building the smallest Obsidian Plugin scaffold before any Core MVP domain work begins.
+SilverCommandCenter is being prepared as a local-first Obsidian command center. Phase 0 established the repository foundation, and Phase 1 delivered the smallest Obsidian Plugin scaffold before any Core MVP domain work begins.
 
 ## Current status
 
 - Phase 0 implementation: complete — PR #1 merged with merge commit `da8f002f5c6d6b37339cd0ade6e6f1832baa7efb`
-- Phase 1 implementation: scaffold created on `feat/phase-1-plugin-scaffold`; manual Obsidian runtime test pending
+- Phase 1 implementation: complete on `feat/phase-1-plugin-scaffold`; manual Obsidian runtime test passed
+- Draft PR: [#2 Phase 1 Obsidian Plugin scaffold](https://github.com/silver-g8/silver-command-center/pull/2)
 - Baseline: `baseline/web-v0.1.0` at commit `53bbc70f04d7bc02f1fa56cae5e8f93881a79229`
 - The original web prototype remains preserved under `prototypes/web-v0/`
 - No domain features, Vault reads/writes, or external integrations are included
@@ -23,7 +24,7 @@ ROADMAP.md           Foundation, MVP, daily workflow, and extension milestones
 CHANGELOG.md         User-visible project history
 ```
 
-The prototype has its own `package.json` and remains an isolated reference artifact. Phase 1 uses the root toolchain and has passed `npm run typecheck`, `npm run lint`, and `npm run build`. Runtime testing in the dedicated test Vault is still pending.
+The prototype has its own `package.json` and remains an isolated reference artifact. Phase 1 uses the root toolchain and has passed `npm run typecheck`, `npm run lint`, and `npm run build`. Manual runtime testing in the dedicated test Vault also passed without Vault writes.
 
 See [docs/phase-1-scaffold.md](docs/phase-1-scaffold.md) for the portable Fedora deployment and manual verification procedure. The generated `main.js` is local build output and is intentionally ignored; only `manifest.json`, `main.js`, and `styles.css` are copied into the test Vault during manual testing.
 

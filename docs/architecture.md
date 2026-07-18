@@ -2,7 +2,7 @@
 
 ## Phase status
 
-Phase 0 implementation is complete and PR #1 is merged. Phase 1 scaffold implementation is in progress on `feat/phase-1-plugin-scaffold`; no domain feature or Vault integration is present.
+Phase 0 implementation is complete and PR #1 is merged. Phase 1 scaffold implementation is complete on `feat/phase-1-plugin-scaffold` and is under review in Draft PR #2; no domain feature or Vault integration is present.
 
 ## Architecture principles
 

@@ -57,7 +57,7 @@ Implementation complete; PR #1 merged. This phase contains repository structure,
 
 ### Phase 1 — Obsidian Plugin scaffold
 
-Phase 1 implementation is in progress on `feat/phase-1-plugin-scaffold`. The scaffold is limited to the manifest, entry point, build configuration, React mount/unmount lifecycle, five placeholder tabs, and development checks. Automated checks pass; manual Obsidian runtime verification is pending. It does not include Front Seat, Trunk, timer, sync logic, AI, or other domain features.
+Phase 1 implementation is complete on `feat/phase-1-plugin-scaffold` and is under review in Draft PR #2. The scaffold is limited to the manifest, entry point, build configuration, React mount/unmount lifecycle, five placeholder tabs, and development checks. Automated checks and manual Obsidian runtime verification pass. It does not include Front Seat, Trunk, timer, sync logic, AI, or other domain features.
 
 ### Later phases
 
