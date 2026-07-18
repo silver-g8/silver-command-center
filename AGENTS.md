@@ -28,6 +28,13 @@ Never store secrets in Markdown, `data.json`, source files, screenshots, fixture
 - Inspect staged diffs and each commit with `git show` before pushing.
 - Do not mark a Pull Request ready or merge it without explicit confirmation.
 
+## GitHub access
+
+- Run `gh auth status` in the same execution context that will contact GitHub; never paste or store GitHub tokens in the repository, documentation, shell history, or Pull Requests.
+- A sandbox failure to reach the GitHub API, user keyring, or SSH configuration is an execution-environment limitation and is not evidence that the token is invalid.
+- If the sandbox cannot reach GitHub, use the approved elevated network context for `gh` and `git` operations, verify `gh auth status` there, and then perform the minimum required external write.
+- Do not work around the boundary by copying credentials into files or changing repository remotes to embed credentials.
+
 ## Fedora constraints
 
 - Use the repository path supplied by the session and do not assume a second clone.

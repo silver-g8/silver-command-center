@@ -2,6 +2,8 @@
 node_modules/
 dist/
 coverage/
+main.js
+*.map
 
 # Environment and local data
 .env

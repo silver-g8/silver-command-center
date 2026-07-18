@@ -2,7 +2,19 @@
 
 ## Phase status
 
-Phase 0 implementation is complete and PR #1 is merged. Phase 1 is the next candidate step and is limited to an Obsidian Plugin scaffold; no plugin runtime or domain feature is present in this branch.
+Phase 0 implementation is complete and PR #1 is merged. Phase 1 implementation and verification are complete on `feat/phase-1-plugin-scaffold`; Draft PR #2 is pending review and explicit merge approval. No domain feature or Vault integration is present.
+
+## Phase 1 placeholder navigation
+
+The Phase 1 view exposes exactly five placeholder navigation tabs:
+
+- `Work`
+- `Build`
+- `Learn`
+- `Create`
+- `Inspired`
+
+These tabs provide navigation and active/focus state only. They do not represent Core MVP domain behavior, read Vault data, or create persistence.
 
 ## Architecture principles
 

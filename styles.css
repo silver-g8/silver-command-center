@@ -1,0 +1,113 @@
+.silver-command-center-view {
+  height: 100%;
+}
+
+.silver-command-center-plugin {
+  --scc-background: #111318;
+  --scc-surface: #1a1d24;
+  --scc-surface-muted: #242833;
+  --scc-border: #343947;
+  --scc-text: #f4f5f7;
+  --scc-text-muted: #aeb4c0;
+  --scc-accent: #8bb8ff;
+  --scc-accent-contrast: #101521;
+
+  box-sizing: border-box;
+  min-height: 100%;
+  padding: 3rem clamp(1.25rem, 5vw, 5rem);
+  color: var(--scc-text);
+  background: var(--scc-background);
+  font-family: var(--font-interface);
+}
+
+.silver-command-center-plugin * {
+  box-sizing: border-box;
+}
+
+.silver-command-center-header {
+  max-width: 44rem;
+  margin: 0 auto 2.5rem;
+}
+
+.silver-command-center-eyebrow,
+.silver-command-center-panel-label {
+  margin: 0 0 0.5rem;
+  color: var(--scc-accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.silver-command-center-header h1,
+.silver-command-center-panel h2 {
+  margin: 0;
+  color: var(--scc-text);
+}
+
+.silver-command-center-header h1 {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.05;
+}
+
+.silver-command-center-description,
+.silver-command-center-panel p:last-child {
+  margin: 0.85rem 0 0;
+  color: var(--scc-text-muted);
+  line-height: 1.6;
+}
+
+.silver-command-center-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  max-width: 44rem;
+  margin: 0 auto 1rem;
+  padding: 0.35rem;
+  border: 1px solid var(--scc-border);
+  border-radius: 0.8rem;
+  background: var(--scc-surface);
+}
+
+.silver-command-center-tabs button {
+  flex: 1 1 6rem;
+  min-height: 2.75rem;
+  padding: 0.65rem 0.9rem;
+  border: 0;
+  border-radius: 0.55rem;
+  color: var(--scc-text-muted);
+  background: transparent;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.silver-command-center-tabs button:hover {
+  color: var(--scc-text);
+  background: var(--scc-surface-muted);
+}
+
+.silver-command-center-tabs button.is-active {
+  color: var(--scc-accent-contrast);
+  background: var(--scc-accent);
+}
+
+.silver-command-center-tabs button:focus-visible,
+.silver-command-center-panel:focus-visible {
+  outline: 2px solid var(--scc-accent);
+  outline-offset: 2px;
+}
+
+.silver-command-center-panel {
+  max-width: 44rem;
+  min-height: 12rem;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 1px solid var(--scc-border);
+  border-radius: 0.8rem;
+  background: var(--scc-surface);
+}
+
+.silver-command-center-panel h2 {
+  font-size: 1.75rem;
+}
