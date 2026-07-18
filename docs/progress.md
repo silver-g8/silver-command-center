@@ -2,7 +2,7 @@
 
 ## Current Phase
 
-Phase 0 — Foundation implementation complete; PR #1 merged.
+Phase 1 — Obsidian Plugin scaffold approved; implementation in progress on `feat/phase-1-plugin-scaffold`.
 
 ## Completed
 
@@ -25,15 +25,19 @@ Phase 0 — Foundation implementation complete; PR #1 merged.
 - Baseline tag: `baseline/web-v0.1.0` retained.
 - Working branch `chore/phase-0-foundation`: deleted locally and remotely.
 
-## Phase 1 next step
+## Phase 1 active scope
 
-Phase 1 is the next candidate step and is limited to the Obsidian Plugin scaffold: manifest, entry point, build configuration, and development checks. It does not include domain features such as Front Seat, Trunk, focus timer, sync logic, AI, or external integrations. It requires explicit phase approval before implementation.
+Phase 1 is approved and limited to the Obsidian Plugin scaffold: manifest, entry point, build configuration, React mount/unmount lifecycle, five placeholder tabs, and development checks. It does not include domain features such as Front Seat, Trunk, focus timer, sync logic, AI, or external integrations. Manual testing in the dedicated test Vault must pass before any push or Pull Request update.
 
-## Validation status
+## Phase 1 verification status
 
 - Prototype content-preservation checks remain required and must pass after every docs-only follow-up.
 - Privacy boundary checks remain required.
-- Build and runtime checks were intentionally not run during Phase 0 because no plugin scaffold exists yet.
+- `npm run typecheck` passes.
+- `npm run lint` passes.
+- `npm run build` passes and creates ignored local output at `main.js`.
+- The local Obsidian executable reports version `1.12.7`; the authorization brief named `1.27.7`. The manifest remains at `minAppVersion: 1.0.0`, and the scaffold avoids APIs reported as newer than that baseline.
+- Deployment and manual runtime checks in the dedicated test Vault are pending.
 
 ## Decisions and constraints
 

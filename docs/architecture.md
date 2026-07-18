@@ -2,7 +2,7 @@
 
 ## Phase status
 
-Phase 0 implementation is complete and PR #1 is merged. Phase 1 is the next candidate step and is limited to an Obsidian Plugin scaffold; no plugin runtime or domain feature is present in this branch.
+Phase 0 implementation is complete and PR #1 is merged. Phase 1 scaffold implementation is in progress on `feat/phase-1-plugin-scaffold`; no domain feature or Vault integration is present.
 
 ## Architecture principles
 
